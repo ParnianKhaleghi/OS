@@ -17,3 +17,6 @@ TIMESTAMP=$(date +%Y-%m-%d_%H-%M-%S)
 DEST="$BACKUP_DIR/backup_$TIMESTAMP.tar.gz"
 CONF_FILE="backup.conf"
 LOG_FILE="backup.log"
+
+# Ensure backup directory exists
+mkdir -p "$BACKUP_DIR"
