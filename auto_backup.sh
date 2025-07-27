@@ -30,3 +30,11 @@ if [[ $3 == "--dry-run" ]]; then
     cat $CONF_FILE
     exit 0
 fi
+
+echo "Creating archive at $DEST..."
+START_TIME=$(date +%s)
+
+tar -czf "$DEST" -T $CONF_FILE
+
+END_TIME=$(date +%s)
+DURATION=$((END_TIME - START_TIME))
