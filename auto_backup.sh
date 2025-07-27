@@ -41,3 +41,5 @@ DURATION=$((END_TIME - START_TIME))
 SIZE=$(du -sh "$DEST" | cut -f1)
 
 
+echo "$TIMESTAMP Backup completed: $DEST | Size: $SIZE | Duration: ${DURATION}s" >> $LOG_FILE
+
