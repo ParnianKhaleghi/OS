@@ -38,3 +38,6 @@ tar -czf "$DEST" -T $CONF_FILE
 
 END_TIME=$(date +%s)
 DURATION=$((END_TIME - START_TIME))
+SIZE=$(du -sh "$DEST" | cut -f1)
+
+
