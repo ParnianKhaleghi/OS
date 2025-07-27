@@ -20,3 +20,8 @@ LOG_FILE="backup.log"
 
 # Ensure backup directory exists
 mkdir -p "$BACKUP_DIR"
+echo "Searching for *.$FILE_EXT files..."
+
+find /home/parnian/Desktop -type f -name "*.$FILE_EXT" 2>/dev/null > $CONF_FILE
+
+
