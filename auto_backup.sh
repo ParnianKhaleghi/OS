@@ -51,3 +51,8 @@ echo "Backup finished successfully: $DEST" | mail -s "Backup Success" parniankha
 
 
 
+if [[ $3 == "-encrypt" ]]; then
+    gpg --symmetric --cipher-algo AES256 "$DEST"
+    rm "$DEST"
+    exit 0
+fi
